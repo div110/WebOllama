@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HomeLLama</title>
+</head>
+	
+<body>
+	<h1>HomeLLama Web Interface</h1>
+	<form action="/ollama" method="POST">
+		<textarea name="input" rows="4" cols="50" placeholder="Your message"></textarea><hr><hr>
+		<button type="submit">Send</button>
+	</form>
+
+	{% if user_input %}
+		<h3>Your Input: </h3>
+		<p>{{ user_input }}</p>
+		<h3>Response: </h3>
+		<p>{{ response }}</p>
+	{% elif error %}
+		<h3>Error: </h3>
+		<p>{{ error }}</p>
+	{% endif %}
+
+</body>
+</html>
