@@ -17,7 +17,7 @@ def query_ollama():
                     model="deepseek-r1:1.5b",
                     messages=[{"role":"user","content": user_input}]
                 )
-            mode_response = response['message']['content']
+            model_response = response['message']['content']
 
             return render_template('index.html', response=model_response, user_input=user_input)
         except Exception as e:
