@@ -7,12 +7,8 @@
 </head>
 	
 <body>
-	<h1>HomeLLama Web Interface</h1>
-	<form action="/ollama" method="POST">
-		<textarea name="input" rows="4" cols="50" placeholder="Your message"></textarea><hr><hr>
-		<button type="submit">Send</button>
-	</form>
-
+	<h1> Homellama - Simple Ollama Web Interface </h1>
+	<hr>
 	{% if user_input %}
 		<h3>Your Input: </h3>
 		<p>{{ user_input }}</p>
@@ -22,9 +18,30 @@
 		<h3>Error: </h3>
 		<p>{{ error }}</p>
 	{% endif %}
+<div>
+	<form action="/ollama" method="POST">
+		<input name="input" placeholder="Your message"></input>
+		<!--<button type="submit">Send</button>-->
+	</form>
+	</div>
 <style>
 h1 {
 text-align: center;
+}
+form input[name="input"] {
+    width: 85%;
+    text-align: center;
+    background-color: lightgray;
+    border-radius=100px;
+}
+div {
+	text-align: center;
+	position: fixed;
+	bottom: 5%;
+	left: auto;
+	margin-top: auto;
+	width: 100%;
+	border-radius=100px;
 }
 </style>
 </body>

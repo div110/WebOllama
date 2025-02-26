@@ -25,4 +25,4 @@ def query_ollama():
         return render_template('index.html',error="no input!!")
 
 if __name__=="__main__":
-    app.run(debug=True, host="192.168.73.143",port=5000) #can modify this
+    app.run(debug=True, host="127.0.0.1",port=5000) #can modify this
