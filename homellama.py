@@ -14,7 +14,7 @@ def query_ollama():
     if user_input:
         try:
             response = ollama.chat(
-                    model="deepseek-r1:1.5b",
+                    model="deepseek-r1:7b",
                     messages=[{"role":"user","content": user_input}]
                 )
             model_response = response['message']['content']

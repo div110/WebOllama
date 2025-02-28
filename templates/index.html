@@ -10,9 +10,9 @@
 	<h1> Homellama - Simple Ollama Web Interface </h1>
 	<hr>
 	{% if user_input %}
-		<h3>Your Input: </h3>
+		<h3>Prompt: </h3>
 		<p>{{ user_input }}</p>
-		<h3>Response: </h3>
+		<h3>Reply: </h3>
 		<p>{{ response }}</p>
 	{% elif error %}
 		<h3>Error: </h3>
@@ -56,8 +56,11 @@ h3 {
 margin-left: 5%;
 }
 p {
-	#TODO
-margin-left: 10;
+padding: 0px;
+display: inline;
+margin-left:10%;
+background-color: darkgray;
+border-radius: 10px;
 }
 </style>
 </body>
